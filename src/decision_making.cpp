@@ -1,3 +1,4 @@
+#include "sensor_data.h"
 #include <iostream>
 
 using namespace std;
@@ -11,15 +12,6 @@ int getCameraData(){
     int camera_value = -1;
 
     return camera_value;
-}
-
-/*
-    Retorna a distância para um obstáculo, em metros
-*/
-float getSensorData(){
-    float sensor_value = 0.85;
-
-    return sensor_value;
 }
 
 /*
@@ -75,9 +67,9 @@ int getMovimentDirection(){
     float obstacle_distance = getObstacleDistance();
 
     if (obstacle_distance < 15){
-        return -1
+        return -1;
     }
-    return 1
+    return 1;
 }
 
 /*
