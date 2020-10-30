@@ -3,3 +3,6 @@ decision_making: decision_making.cpp sensor_data.o
 
 sensor_data.o: sensor_data.cpp sensor_data.h 
 	g++ -c sensor_data.cpp
+
+clean:
+	rm *.o decision_making
