@@ -65,6 +65,35 @@ float movimentRate(){
     return moviment_rate;
 }
 
+/*
+    Retorna a direção que o robô deverá tomar
+        retorna 1 se for para seguir em frente
+        retorna -1 se for para reverso
+*/
+int getMovimentDirection(){
+    int moviment_direction;
+    float obstacle_distance = getObstacleDistance();
+
+    if (obstacle_distance < 15){
+        return -1
+    }
+    return 1
+}
+
+/*
+    Função principal do módulo
+*/
+void forward(){
+    float moviment_rate = movimentRate();
+    int moviment_direction = getMovimentDirection();
+
+    /*
+    Em seguida deverá chamar uma função externa para controlar os motores
+
+    movimentEngine(moviment_rate, moviment_direction)
+    */ 
+}
+
 int main(){
 
     int obstacle_direcion = getObstacleDirection();
