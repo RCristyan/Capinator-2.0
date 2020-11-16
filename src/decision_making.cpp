@@ -1,5 +1,6 @@
 // #include "sensor_data.h"
 #include "libSonar.h"
+#include "moveEngine.h"
 #include <iostream>
 
 using namespace std;
@@ -26,7 +27,7 @@ int getObstacleDirection(){
 }
 
 /*
-    Chama a função getSensorData e retorna o valor lido
+    Chama a função ultrassonic_distance e retorna o valor lido
 */
 float getObstacleDistance(){
 
@@ -85,9 +86,21 @@ void forward(){
 
     movimentEngine(moviment_rate, moviment_direction)
     */ 
+
+    move_engine(moviment_rate);
 }
 
 int main(){
+
+    /*
+    A execução principal consiste em chamar constantemente
+    a função forward(), que irá então determinar o movimento
+    dos motores
+
+    while(1){
+        forward();
+    }
+    */
 
     int obstacle_direcion = getObstacleDirection();
 
