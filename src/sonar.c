@@ -7,7 +7,7 @@ using namespace std;
 #define TRIGGER 1
 #define ECHO 0
 
-int ultrassonic_distance()
+double ultrassonic_distance()
 {
     if (wiringPiSetup() == -1) // verifica se o pino pode ser usado
         return -1;

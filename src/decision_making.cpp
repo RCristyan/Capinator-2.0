@@ -1,4 +1,5 @@
-#include "sensor_data.h"
+// #include "sensor_data.h"
+#include "libSonar.h"
 #include <iostream>
 
 using namespace std;
@@ -29,7 +30,7 @@ int getObstacleDirection(){
 */
 float getObstacleDistance(){
 
-    float obstacle_distance = getSensorData();
+    float obstacle_distance = ultrassonic_distance();
 
     return obstacle_distance;
 }

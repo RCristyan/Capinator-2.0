@@ -19,4 +19,6 @@ class Sonar
     long now;
 };
 
+double ultrassonic_distance();
+
 #endif
