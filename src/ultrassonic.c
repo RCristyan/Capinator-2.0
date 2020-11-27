@@ -33,8 +33,4 @@ double Sonar::distance(int timeout)
     return distanceMeters;
 }
 
-void Sonar::recordPulseLength()
-{
-    startTimeUsec = micros();
-    while ( digitalRead(echo) == HIGH );
-    endTi
+void Sonar::recordPulseLength(){}
